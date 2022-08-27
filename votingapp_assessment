@@ -80,5 +80,5 @@ Observations :-
 	vote         NodePort    10.99.76.213    <none>        5000:31000/TCP   25m
 
 Observations :-
-  1) After deletion of db pod, in some seconds the application failed to caputre the votes and update the result in result page. (cat, dogs stopped the fight :) )
+  1) After deletion of db pod, in some seconds the application failed to caputre the votes and update the result in result page. (cat, dog stopped the fight :) )
     
