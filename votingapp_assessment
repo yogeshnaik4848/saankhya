@@ -81,4 +81,5 @@ Observations :-
 
 Observations :-
   1) After deletion of db pod, in some seconds the application failed to caputre the votes and update the result in result page. (cat, dog stopped the fight :) )
-    
+  2) Worker Pod got restarted as it was unable to connect to db for some time and the container exited, thus pod alos got restarted.
+
