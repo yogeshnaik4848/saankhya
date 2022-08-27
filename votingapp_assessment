@@ -83,3 +83,12 @@ Observations :-
   1) After deletion of db pod, in some seconds the application failed to caputre the votes and update the result in result page. (cat, dog stopped the fight :) )
   2) Worker Pod got restarted as it was unable to connect to db for some time and the container exited, thus pod alos got restarted.
 
+5) I deleted the result pod and thus new result pod was strated which was able connect to right db instance and thus the application started workingm, but all previous data was lost.
+	[root@ip-172-31-1-40 ec2-user]# kubectl get po
+	NAME                      READY   STATUS    RESTARTS   AGE
+	db-b54cd94f4-9jvfz        1/1     Running   0          20h
+	mynginx                   1/1     Running   0          2d
+	redis-868d64d78-7fdbg     1/1     Running   0          21h
+	result-5d57b59f4b-v8xx2   1/1     Running   0          3m56s
+	vote-94849dc97-v5xf5      1/1     Running   0          21h
+	worker-dd46d7584-rvfsp    1/1     Running   1          21h
